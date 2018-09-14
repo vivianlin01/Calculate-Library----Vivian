@@ -38,5 +38,46 @@ public class Calculate {
 	} //converts binomial multiplication into quadratic equation
 	public static String foil(int num1, int num2, int num3, int num4) {
 		return num1*num3+"n^2+"+(num1*num4+num2*num3)+"n+"+(num2*num4);
+	} //determines whether or not one int is evenly divisible by another
+	public static boolean isDivisibleBy(int num1, int num2) {
+		int remainder = num1 % num2;
+		if (remainder==0) {
+			return true;
+		}else {
+			return false;
+		}
+	} //returns absolute value of the number passed
+	public static double absValue(double num1) {
+		if (num1<0) {
+			return -num1;
+		}else {
+			return num1;
+		}
+	} //returns the larger of 2 values
+	public static double max(double num1, double num2) {
+		if (num1>=num2) {
+			return num1;
+		}else {
+			return num2;
+		}
+	} //returns the larger of 3 values
+	public static double max(double num1, double num2, double num3) {
+		if (num1>=num2 && num1>=num3) {
+			return num1;
+		}else {
+			if (num2>=num3) {
+				return num2;
+			}else {
+				return num3;
+			}
+		}
+	} //returns smaller of 2 values
+	public static int min(int num1, int num2) {
+		if (num1<=num2) {
+			return num1;
+		}else {
+			return num2;
+		}
 	}
 }
+ 
