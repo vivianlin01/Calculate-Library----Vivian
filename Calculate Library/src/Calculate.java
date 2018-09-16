@@ -78,6 +78,9 @@ public class Calculate {
 		}else {
 			return num2;
 		}
+	} //rounds value to 2 decimal places
+	public static double round2(double value) {
+		
 	}
 }
  
