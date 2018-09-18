@@ -85,6 +85,12 @@ public class Calculate {
 		}else {
 			return (((value*1000)+(10-value*1000%10))/1000);
 		}
+	} //raises a value to a positive int power
+	public static double exponent(double num1, int power) {
+		double answer;
+		for (int i=1; i<=power; i++) {
+			answer= 
+		}
 	}
 }
  
