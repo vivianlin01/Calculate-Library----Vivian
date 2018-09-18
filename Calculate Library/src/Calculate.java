@@ -80,7 +80,11 @@ public class Calculate {
 		}
 	} //rounds value to 2 decimal places
 	public static double round2(double value) {
-		
+		if (value*1000%10<5) {
+			return (((value*1000)-(value*1000%10))/1000);
+		}else {
+			return (((value*1000)+(10-value*1000%10))/1000);
+		}
 	}
 }
  
