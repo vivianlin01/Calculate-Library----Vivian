@@ -86,11 +86,39 @@ public class Calculate {
 			return (((value*1000)+(10-value*1000%10))/1000);
 		}
 	} //raises a value to a positive int power
-	public static double exponent(double num1, int power) {
-		double answer;
-		for (int i=1; i<=power; i++) {
-			answer= 
+	public static double exponent(double base, int power) {
+		double answer = base;
+		for (int i=1; i<power; i++) {
+			answer=answer*base;
 		}
+		return answer;
+	} //returns the factorial of the value passed
+	public static int factorial(int value) {
+		int product = 1;
+		for (int i=2; i<=value; i++) {
+			product=product*i;
+		}
+		return product;
+	} //determines whether or not an int is prime ;INCOMPLETE
+	public static boolean isPrime(int value) {
+		boolean divisible;
+		boolean isPrime = true;
+		if(value > 1) {
+			for(int i=value-1; i>1; i--) {
+				divisible = Calculate.isDivisibleBy(value, i);
+				if(divisible == true) {
+					isPrime = false;
+				}else {
+					isPrime = true;
+				}
+			}
+		}else if(value==1) {
+			isPrime = true;	
+		}else {
+			isPrime=false;
+		}
+		return isPrime;
+	} //finds greatest common factor of two integers
+
 	}
-}
  
