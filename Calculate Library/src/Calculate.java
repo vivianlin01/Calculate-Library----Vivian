@@ -99,18 +99,37 @@ public class Calculate {
 			product=product*i;
 		}
 		return product;
-	} //determines whether or not an int is prime ;INCOMPLETE
+	} //determines whether or not an int is prime
 	public static boolean isPrime(int value) {
-		boolean divisible;
-		boolean isPrime = true;
-			for(int i=2; i<1; i++) {
-				divisible = Calculate.isDivisibleBy(value, i);
-				if(divisible == true) {
-					isPrime = false;
-				}else {
-					isPrime = true;
+		boolean answer=true;
+		boolean divide;
+			for(int i=2; i<value; i++) {
+				divide = Calculate.isDivisibleBy(value, i);
+				if(divide == true) {
+					answer = false;
 				}
-		return isPrime;
 			}
+		return answer;
+	} //finds the greatest common factor of two integers
+	public static int gcf(int num1, int num2) {
+		int factor=num1;
+			for (int i=factor; i>=1; i--) {
+				boolean divisible1 = Calculate.isDivisibleBy(num1, i);
+				boolean divisible2 = Calculate.isDivisibleBy(num2, i);
+				if (divisible1==true && divisible2==true) {
+					return i;
+				}
+			}
+			return factor;
+	} //returns an approximation of the square root of value
+	public static double sqrt(double value) {
+		double answer=1;
+		double root;
+		for(int i=1; i<=value; i++) {
+			root = i;
+			if (root*root<=(value-0.005)){
+				answer = Calculate.round2(0.5*((value/root)+root));
+			}
+		} return answer;
 	}
 }
