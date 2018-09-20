@@ -103,22 +103,14 @@ public class Calculate {
 	public static boolean isPrime(int value) {
 		boolean divisible;
 		boolean isPrime = true;
-		if(value > 1) {
-			for(int i=value-1; i>1; i--) {
+			for(int i=2; i<1; i++) {
 				divisible = Calculate.isDivisibleBy(value, i);
 				if(divisible == true) {
 					isPrime = false;
 				}else {
 					isPrime = true;
 				}
-			}
-		}else if(value==1) {
-			isPrime = true;	
-		}else {
-			isPrime=false;
-		}
 		return isPrime;
-	} //finds greatest common factor of two integers
-
+			}
 	}
- 
+}
