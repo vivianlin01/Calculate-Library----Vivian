@@ -126,8 +126,8 @@ public class Calculate {
 		double answer=1;
 		double root;
 		for(int i=1; i<=value; i++) {
-			root = i;
-			if (root*root<=(value-0.005)){
+			root=answer;
+			if (Calculate.round2(value-(root*root)) != 0) {
 				answer = Calculate.round2(0.5*((value/root)+root));
 			}
 		} return answer;
