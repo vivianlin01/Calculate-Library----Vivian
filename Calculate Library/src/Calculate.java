@@ -34,10 +34,10 @@ public class Calculate {
 		return (num1*num3+num2)+"/"+num3;
 	} //converts improper fraction into a mixed number
 	public static String toMixedNum(int num1, int num2) {
-		return num1/num2+" "+ (num1%num2)+"/"+num2;
+		return num1/num2+"_"+ (num1%num2)+"/"+num2;
 	} //converts binomial multiplication into quadratic equation
 	public static String foil(int num1, int num2, int num3, int num4) {
-		return num1*num3+"n^2+"+(num1*num4+num2*num3)+"n+"+(num2*num4);
+		return num1*num3+"n^2 + "+(num1*num4+num2*num3)+"n + "+(num2*num4);
 	} //determines whether or not one int is evenly divisible by another
 	public static boolean isDivisibleBy(int num1, int num2) {
 		int remainder = num1 % num2;
