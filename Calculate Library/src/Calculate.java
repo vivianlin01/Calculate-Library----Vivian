@@ -87,6 +87,7 @@ public class Calculate {
 		}
 	} //raises a value to a positive int power
 	public static double exponent(double base, int power) {
+		if (power<0) throw new IllegalArgumentException("cannot take negative exponent");
 		double answer = base;
 		for (int i=1; i<power; i++) {
 			answer=answer*base;
@@ -94,6 +95,7 @@ public class Calculate {
 		return answer;
 	} //returns the factorial of the value passed
 	public static int factorial(int value) {
+		if(value<0) throw new IllegalArgumentException("cannot take factorial of negative values");
 		int product = 1;
 		for (int i=2; i<=value; i++) {
 			product=product*i;
