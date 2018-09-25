@@ -18,40 +18,40 @@ public class Calculate {
 		double sum = num1 + num2 + num3;
 		return sum/3;
 	} //converts angle measure in radians into degrees
-	public static double toDegrees(double angle) {
-		double sum = angle*180;
+	public static double toDegrees(double rad) {
+		double sum = rad*180;
 		return sum/3.1415926;
 	} //converts angle measure in degrees into radians
-	public static double toRadians(double angle) {
-		double sum = angle*3.1415926;
+	public static double toRadians(double deg) {
+		double sum = deg*3.1415926;
 		return sum/180;
 	} //provides coefficients of quadratic equation in standard form
-	public static double discriminant(double num1, double num2, double num3) {
-		double sum = (num2*num2) - (4*num1*num3);
-		return sum;
+	public static double discriminant(double a, double b, double c) {
+		double answer = (b*b) - (4*a*c);
+		return answer;
 	} //converts mixed number into an improper fraction
-	public static String toImproperFrac(int num1, int num2, int num3) {
-		return (num1*num3+num2)+"/"+num3;
+	public static String toImproperFrac(int whole, int num, int den) {
+		return (whole*den+num)+"/"+den;
 	} //converts improper fraction into a mixed number
-	public static String toMixedNum(int num1, int num2) {
-		return num1/num2+"_"+ (num1%num2)+"/"+num2;
+	public static String toMixedNum(int num, int den) {
+		return num/den+"_"+ (num%den)+"/"+den;
 	} //converts binomial multiplication into quadratic equation
-	public static String foil(int num1, int num2, int num3, int num4) {
-		return num1*num3+"n^2 + "+(num1*num4+num2*num3)+"n + "+(num2*num4);
+	public static String foil(int a, int b, int c, int d) {
+		return a*c+"n^2 + "+(a*d+b*c)+"n + "+(b*d);
 	} //determines whether or not one int is evenly divisible by another
-	public static boolean isDivisibleBy(int num1, int num2) {
-		int remainder = num1 % num2;
+	public static boolean isDivisibleBy(int num, int factor) {
+		int remainder = num % factor;
 		if (remainder==0) {
 			return true;
 		}else {
 			return false;
 		}
 	} //returns absolute value of the number passed
-	public static double absValue(double num1) {
-		if (num1<0) {
-			return -num1;
+	public static double absValue(double num) {
+		if (num<0) {
+			return -num;
 		}else {
-			return num1;
+			return num;
 		}
 	} //returns the larger of 2 values
 	public static double max(double num1, double num2) {
