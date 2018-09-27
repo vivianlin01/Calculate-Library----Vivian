@@ -15,7 +15,7 @@ public class DoMath {
 		System.out.println(Calculate.discriminant(3.0,2.0,4.0));
 		System.out.println(Calculate.toImproperFrac(3,1,2));
 		System.out.println(Calculate.toMixedNum(7, 2));
-		System.out.println(Calculate.foil(2,3,6,-7));
+		System.out.println(Calculate.foil(2,3,6,-7,"n"));
 		System.out.println(Calculate.isDivisibleBy(8, 2));
 		System.out.println(Calculate.absValue(-4.0));
 		System.out.println(Calculate.max(2.0, 3.0));
@@ -29,3 +29,4 @@ public class DoMath {
 		System.out.println(Calculate.sqrt(119));
 	}
 }
+

@@ -36,7 +36,7 @@ public class Calculate {
 	public static String toMixedNum(int num, int den) {
 		return num/den+"_"+ (num%den)+"/"+den;
 	} //converts binomial multiplication into quadratic equation
-	public static String foil(int a, int b, int c, int d) {
+	public static String foil(int a, int b, int c, int d, String n) {
 		return a*c+"n^2 + "+(a*d+b*c)+"n + "+(b*d);
 	} //determines whether or not one int is evenly divisible by another
 	public static boolean isDivisibleBy(int num, int factor) {
