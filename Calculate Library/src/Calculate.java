@@ -40,6 +40,7 @@ public class Calculate {
 		return a*c+"n^2 + "+(a*d+b*c)+"n + "+(b*d);
 	} //determines whether or not one int is evenly divisible by another
 	public static boolean isDivisibleBy(int num, int factor) {
+		if (factor==0) throw new IllegalArgumentException("cannot divide by 0");
 		int remainder = num % factor;
 		if (remainder==0) {
 			return true;
@@ -89,7 +90,9 @@ public class Calculate {
 	public static double exponent(double base, int power) {
 		if (power<0) throw new IllegalArgumentException("cannot take negative exponent");
 		double answer = base;
-		for (int i=1; i<power; i++) {
+		if(power==0) {
+			System.out.println("1.0");
+		}else for (int i=1; i<power; i++) {
 			answer=answer*base;
 		}
 		return answer;
@@ -125,6 +128,7 @@ public class Calculate {
 			return factor;
 	} //returns an approximation of the square root of value
 	public static double sqrt(double value) {
+		if(value<0) throw new IllegalArgumentException("cannot take square root of a negative value");
 		double answer=1;
 		double root;
 		for(int i=1; i<=value; i++) {
@@ -133,5 +137,10 @@ public class Calculate {
 				answer = Calculate.round2(0.5*((value/root)+root));
 			}
 		} return answer;
+	}//uses the coefficients of a quad equation to approximate the real roots using quad formula
+	public static String quadForm(int a, int b, int c) {
+		if(Calculate.discriminant(a, b, c)>0) {
+			
+		}
 	}
 }
