@@ -30,11 +30,11 @@ public class Calculate {
 		double answer = (b*b) - (4*a*c);
 		return answer;
 	} //converts mixed number into an improper fraction
-	public static String toImproperFrac(int whole, int num, int den) {
-		return (whole*den+num)+"/"+den;
+	public static String toImproperFrac(int whole, int numer, int denom) {
+		return (whole*denom+numer)+"/"+denom;
 	} //converts improper fraction into a mixed number
-	public static String toMixedNum(int num, int den) {
-		return num/den+"_"+ (num%den)+"/"+den;
+	public static String toMixedNum(int numer, int denom) {
+		return numer/denom+"_"+ (numer%denom)+"/"+denom;
 	} //converts binomial multiplication into quadratic equation
 	public static String foil(int a, int b, int c, int d, String n) {
 		return a*c+"n^2 + "+(a*d+b*c)+"n + "+(b*d);
@@ -47,11 +47,11 @@ public class Calculate {
 			return false;
 		}
 	} //returns absolute value of the number passed
-	public static double absValue(double num) {
-		if (num<0) {
-			return -num;
+	public static double absValue(double value) {
+		if (value<0) {
+			return -value;
 		}else {
-			return num;
+			return value;
 		}
 	} //returns the larger of 2 values
 	public static double max(double num1, double num2) {
