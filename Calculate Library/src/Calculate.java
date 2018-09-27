@@ -109,7 +109,7 @@ public class Calculate {
 		boolean answer=true;
 		boolean divide;
 			for(int i=2; i<value; i++) {
-				divide = Calculate.isDivisibleBy(value, i);
+				divide = isDivisibleBy(value, i);
 				if(divide == true) {
 					answer = false;
 				}
@@ -119,8 +119,8 @@ public class Calculate {
 	public static int gcf(int num1, int num2) {
 		int factor=num1;
 			for (int i=factor; i>=1; i--) {
-				boolean divisible1 = Calculate.isDivisibleBy(num1, i);
-				boolean divisible2 = Calculate.isDivisibleBy(num2, i);
+				boolean divisible1 = isDivisibleBy(num1, i);
+				boolean divisible2 = isDivisibleBy(num2, i);
 				if (divisible1==true && divisible2==true) {
 					return i;
 				}
@@ -136,8 +136,8 @@ public class Calculate {
 		double root;
 		for(int i=1; i<=value; i++) {
 			root=answer;
-			if (Calculate.round2(value-(root*root)) != 0) {
-				answer = Calculate.round2(0.5*((value/root)+root));
+			if (round2(value-(root*root)) != 0) {
+				answer = round2(0.5*((value/root)+root));
 			}
 		} return answer;
 	}//uses the coefficients of a quad equation to approximate the real roots using quad formula
