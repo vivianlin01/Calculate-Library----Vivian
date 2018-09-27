@@ -129,6 +129,9 @@ public class Calculate {
 	} //returns an approximation of the square root of value
 	public static double sqrt(double value) {
 		if(value<0) throw new IllegalArgumentException("cannot take square root of a negative value");
+		if(value==0) {
+			return 0;
+		}
 		double answer=1;
 		double root;
 		for(int i=1; i<=value; i++) {
@@ -139,8 +142,17 @@ public class Calculate {
 		} return answer;
 	}//uses the coefficients of a quad equation to approximate the real roots using quad formula
 	public static String quadForm(int a, int b, int c) {
-		if(Calculate.discriminant(a, b, c)>0) {
-			
+		double root1;
+		double root2;
+		if(discriminant(a, b, c)>0) {
+			root1=(-b+sqrt(b*b-4*a*c))/(2*a);
+			root2=(-b-sqrt(b*b-4*a*c))/(2*a);
+			return root1 + " and " + root2;
+		}else if(discriminant(a, b, c)==0){
+			root1=-b/(2*a);
+			return root1+ "";
+		}else {
+			return "no real roots";
 		}
 	}
 }
