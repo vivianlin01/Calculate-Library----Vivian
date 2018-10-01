@@ -27,7 +27,7 @@ public class Calculate {
 		return sum/180;
 	} //provides coefficients of quadratic equation in standard form
 	public static double discriminant(double a, double b, double c) {
-		double answer = (b*b) - (4*a*c);
+		double answer = (b*b)-(4*a*c);
 		return answer;
 	} //converts mixed number into an improper fraction
 	public static String toImproperFrac(int whole, int numer, int denom) {
@@ -81,6 +81,14 @@ public class Calculate {
 		}
 	} //rounds value to 2 decimal places
 	public static double round2(double value) {
+		if (value<0) { 
+			double posvalue=-value;
+			if (posvalue*1000%10<5) {
+				return (((posvalue*1000)-(posvalue*1000%10))/1000);
+			}else {
+				return (((posvalue*1000)+(10-posvalue*1000%10))/1000);
+			}
+		}
 		if (value*1000%10<5) {
 			return (((value*1000)-(value*1000%10))/1000);
 		}else {
