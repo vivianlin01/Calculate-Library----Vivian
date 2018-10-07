@@ -8,9 +8,11 @@ import java.util.Scanner;
 public class QuadraticClient {
 	
 	public static void main(String[] args) {
-		Scanner userInput = newScanner (System.in);
+		Scanner userInput = new Scanner (System.in);
+		System.out.println("a");
+		System.out.println("b");
+		System.out.println("c");
+		int hp=userInput.nextInt(); //replace hp
 		System.out.println(Quadratic.quadrDescriber(a, b, c));
-		int hp=userInput.nextInt();
 	}
-
 }
