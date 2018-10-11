@@ -6,7 +6,6 @@ import java.util.Scanner;
  * @version October 2, 2018
  */
 public class QuadraticClient {
-	
 	public static void main(String[] args) {
 		Scanner console = new Scanner (System.in);
 		boolean go = true;
