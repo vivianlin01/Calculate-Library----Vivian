@@ -3,7 +3,7 @@ import java.util.Scanner;
 /*This class is client code that uses the Quadratic
  * to obtain the description of a quadratic graph 
  * @author Vivian Lin
- * @version October 2, 2018 
+ * @version October 2, 2018.
  */
 public class QuadraticClient {
 	

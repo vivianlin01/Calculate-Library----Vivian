@@ -1,7 +1,7 @@
 /*This class contains a method that provides the user 
  * with the description of a quadratic graph.
  * @author Vivian Lin
- * @version October 2, 2018
+ * @version October 2, 2018.
  */
 public class Quadratic {
 	//writes the equation of the graph
@@ -18,7 +18,7 @@ public class Quadratic {
 			open = "Opens: Down";
 		}return open;
 	}
-	//evaluates axis of symmetry
+	//evaluates axis of symmetry.
 	public static String axis(double a, double b) {
 		String vertex = "Axis of Symmetry: "+ (-b/(2*a));
 		return vertex;
