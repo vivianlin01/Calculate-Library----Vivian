@@ -153,11 +153,11 @@ public class Calculate {
 		double root1;
 		double root2;
 		if(discriminant(a, b, c)>0) {
-			root1=(-b+sqrt(b*b-4*a*c))/(2*a);
-			root2=(-b-sqrt(b*b-4*a*c))/(2*a);
+			root1= round2((-b+sqrt(b*b-4*a*c))/(2*a));
+			root2= round2((-b-sqrt(b*b-4*a*c))/(2*a));
 			return root1 + " and " + root2;
 		}else if(discriminant(a, b, c)==0){
-			root1=-b/(2*a);
+			root1=round2(-b/(2*a));
 			return root1+ "";
 		}else {
 			return "no real roots";
