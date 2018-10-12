@@ -84,7 +84,7 @@ public class Calculate {
 		if (value<0) { 
 			double posvalue=-value;
 			if (posvalue*1000%10<5) {
-				return (((posvalue*1000)-(posvalue*1000%10))/1000);
+				return -(((posvalue*1000)-(posvalue*1000%10))/1000);
 			}else {
 				return -(((posvalue*1000)+(10-posvalue*1000%10))/1000);
 			}

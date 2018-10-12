@@ -20,13 +20,13 @@ public class Quadratic {
 	}
 	//evaluates axis of symmetry
 	public static String axis(double a, double b) {
-		String vertex = "Axis of Symmetry: "+ (-b/(2*a));
+		String vertex = "Axis of Symmetry: "+ round2(-b/(2*a));
 		return vertex;
 	}
 	//evaluates vertex
 	public static String vertex(double a, double b, double c) {
-		double xcoord= (-b/(2*a));
-		double ycoord= (a*xcoord*xcoord + b*xcoord + c);
+		double xcoord= round2(-b/(2*a));
+		double ycoord= round2(a*xcoord*xcoord + b*xcoord + c);
 		String vertex= "Vertex: (" + xcoord + "," + ycoord + ")";
 		return vertex;
 	}
@@ -35,12 +35,12 @@ public class Quadratic {
 		double answer = (b*b)-(4*a*c);
 		return answer;
 	}
-	//round 2 method
+	//x-intercept: round2 method
 	public static double round2(double value) {
 		if (value<0) { 
 			double posvalue=-value;
 			if (posvalue*1000%10<5) {
-				return (((posvalue*1000)-(posvalue*1000%10))/1000);
+				return -(((posvalue*1000)-(posvalue*1000%10))/1000);
 			}else {
 				return -(((posvalue*1000)+(10-posvalue*1000%10))/1000);
 			}
