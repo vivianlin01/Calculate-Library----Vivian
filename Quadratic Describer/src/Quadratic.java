@@ -51,7 +51,7 @@ public class Quadratic {
 			return (((value*1000)+(10-value*1000%10))/1000);
 		}
 	} 
-	//x-intercepts: sqrt method
+	//x-intercept: sqrt method
 	public static double sqrt(double value) {
 		if(value<0) throw new IllegalArgumentException("cannot take square root of a negative value");
 		if(value==0) {
@@ -66,7 +66,7 @@ public class Quadratic {
 			}
 		} return answer;
 	}
-	//x-intercepts
+	//evaluates x-intercepts
 	public static String xintercept(double a, double b, double c) {
 		double root1;
 		double root2;
@@ -81,22 +81,20 @@ public class Quadratic {
 			return "no real roots";
 		}
 	}
-	//y-intercepts
+	//evaluates y-intercept
 	public static String yintercept(double c) {
 		String yintercept= ""+c;
 		return yintercept;
 	}
-	
 	//description of the graph
 	public static String quadrDescriber(double a, double b, double c) {
-		String String1= equation(a,b,c);
-		String String2= opens(a);
-		String String3= axis(a,b);
-		String String4= vertex(a,b,c);
-		String String5= "x-intercept(s): " + xintercept(a,b,c);
-		String String6= "y-intercept: " + yintercept(c);
-		String describer= String1+"\n"+"\n"+String2+"\n"+String3+"\n"+String4+"\n"+String5+"\n"+String6+"\n";
+		String equation= equation(a,b,c);
+		String opens= opens(a);
+		String axis= axis(a,b);
+		String vertex= vertex(a,b,c);
+		String xint= "x-intercept(s): " + xintercept(a,b,c);
+		String yint= "y-intercept: " + yintercept(c);
+		String describer= equation+"\n"+"\n"+opens+"\n"+axis+"\n"+vertex+"\n"+xint+"\n"+yint+"\n";
 		return describer;
-	}
-	
+	}	
 }
